@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import noteService from '../../services/noteService.js';
 
 class AddNoteForm extends Component {
 	constructor(props) {
@@ -24,7 +25,7 @@ class AddNoteForm extends Component {
 			content: this.state.noteContent
 		}
 
-		console.log(form);
+		noteService.addNote(form);
 
 		this.setState({
 			noteTitle: '',
